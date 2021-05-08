@@ -10,7 +10,7 @@ interface AnimalShelter {
 }
 
 class DogShelter implements AnimalShelter {
-    function adopt (string $name): Dog {
+    function adopt (string $name): Dog { // covariance
         $dog = new Dog();
         $dog->name = $name;
         return $dog;
@@ -18,7 +18,7 @@ class DogShelter implements AnimalShelter {
 }
 
 class CatShelter implements AnimalShelter {
-    function adopt(string $name): Cat {
+    function adopt(string $name): Cat { // covariance
         $cat = new Cat();
         $cat->name = $name;
         return $cat;
